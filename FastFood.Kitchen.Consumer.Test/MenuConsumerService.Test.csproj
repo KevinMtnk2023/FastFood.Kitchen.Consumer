@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Worker\FastFood.Kitchen.Consumer.Worker.csproj" />
+    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Worker\MenuConsumerService.Worker.csproj" />
   </ItemGroup>
 
 </Project>

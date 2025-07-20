@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood.Kitchen.Consumer.Worker", "FastFood.Kitchen.Consumer.Worker\FastFood.Kitchen.Consumer.Worker.csproj", "{AD8000E8-166D-486C-9F0E-D37DDE0F32C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsumerService.Worker", "FastFood.Kitchen.Consumer.Worker\MenuConsumerService.Worker.csproj", "{AD8000E8-166D-486C-9F0E-D37DDE0F32C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood.Kitchen.Consumer.Application", "FastFood.Kitchen.Consumer.Application\FastFood.Kitchen.Consumer.Application.csproj", "{2B00C913-4AC4-4E89-B571-835C1EA3E393}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsumerService.Application", "FastFood.Kitchen.Consumer.Application\MenuConsumerService.Application.csproj", "{2B00C913-4AC4-4E89-B571-835C1EA3E393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood.Kitchen.Consumer.Domain", "FastFood.Kitchen.Consumer.Domain\FastFood.Kitchen.Consumer.Domain.csproj", "{6C00F990-BF47-45AC-8B41-AFA87085C0DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsumerService.Domain", "FastFood.Kitchen.Consumer.Domain\MenuConsumerService.Domain.csproj", "{6C00F990-BF47-45AC-8B41-AFA87085C0DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood.Kitchen.Consumer.Infrastructure", "FastFood.Kitchen.Consumer.Infrastructure\FastFood.Kitchen.Consumer.Infrastructure.csproj", "{FDE622C6-02E9-4468-8DCE-558D9B8D7751}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsumerService.Infrastructure", "FastFood.Kitchen.Consumer.Infrastructure\MenuConsumerService.Infrastructure.csproj", "{FDE622C6-02E9-4468-8DCE-558D9B8D7751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood.Kitchen.Consumer.Test", "FastFood.Kitchen.Consumer.Test\FastFood.Kitchen.Consumer.Test.csproj", "{E3682407-2A9F-4100-8D50-4C0FE2754C3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuConsumerService.Test", "FastFood.Kitchen.Consumer.Test\MenuConsumerService.Test.csproj", "{E3682407-2A9F-4100-8D50-4C0FE2754C3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,5 +86,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8BF7939-3EA6-4354-BBA4-A3F0DD94BD1B}
 	EndGlobalSection
 EndGlobal

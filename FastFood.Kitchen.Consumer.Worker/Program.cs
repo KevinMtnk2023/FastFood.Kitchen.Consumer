@@ -1,9 +1,9 @@
 using FastFood.Kitchen.Consumer.Worker;
 using Consumer.Create.Contact.Infrastructure.Messaging;
 using Serilog;
-using FastFood.Kitchen.Consumer.Infrastructure.Persistence;
-using FastFood.Kitchen.Consumer.Application.Interfaces;
-using FastFood.Kitchen.Consumer.Infrastructure.Services;
+using MenuConsumerService.Infrastructure.Persistence;
+using MenuConsumerService.Application.Interfaces;
+using MenuConsumerService.Infrastructure.Services;
 
 // grava logs em um arquivo no kubernete k8s azure
 Log.Logger = new LoggerConfiguration()
@@ -29,8 +29,8 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddSingleton(rabbitMqSettings);
 
         // Registrando serviços e repositórios
-        services.AddScoped<IPedidoCozinhaRepository, PedidoCozinhaRepository>();
-        services.AddScoped<IPedidoCozinhaService, PedidoCozinhaService>();
+        services.AddScoped<IMenuRepository, MenuRepository>();
+        services.AddScoped<IMenuService, MenuService>();
 
         // Registrando o RabbitMQConsumer como Singleton e o Worker como HostedService
         services.AddSingleton<RabbitMQConsumer>();

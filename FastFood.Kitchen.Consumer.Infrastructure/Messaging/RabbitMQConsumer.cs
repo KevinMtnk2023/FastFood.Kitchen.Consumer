@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using FastFood.Kitchen.Consumer.Application.DTO;
-using FastFood.Kitchen.Consumer.Application.Interfaces;
+using MenuConsumerService.Application.DTO;
+using MenuConsumerService.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -73,26 +73,26 @@ namespace Consumer.Create.Contact.Infrastructure.Messaging
 
                     if (messageNode != null)
                     {
-                        var pedidoCozinhaJson = messageNode.ToString();
-                        var PedidoCozinha = JsonSerializer.Deserialize<PedidoCozinhaDto>(pedidoCozinhaJson, new JsonSerializerOptions
+                        var menuJson = messageNode.ToString();
+                        var menu = JsonSerializer.Deserialize<MenuDto>(menuJson, new JsonSerializerOptions
                         {
                             PropertyNameCaseInsensitive = true
                         });
 
-                        if (PedidoCozinha != null)
+                        if (menu != null)
                         {
                             using var scope = _serviceProvider.CreateScope();
-                            var pedidoCozinhaService = scope.ServiceProvider.GetRequiredService<IPedidoCozinhaService>();
+                            var menuService = scope.ServiceProvider.GetRequiredService<IMenuService>();
 
-                            var pedidoCozinhaEntity = PedidoCozinha.ToEntity();
-                            await pedidoCozinhaService.SalvarPedidoCozinhaAsync(pedidoCozinhaEntity);
+                            var menuEntity = menu.ToEntity();
+                            await menuService.SalvarMenuAsync(menuEntity);
 
                             _channel.BasicAck(ea.DeliveryTag, false);
-                            _logger.LogInformation("PedidoCozinha {0} salvo no banco!", PedidoCozinha.Id);
+                            _logger.LogInformation("Menu {0} salvo no banco!", menu.Id);
                         }
                         else
                         {
-                            _logger.LogWarning("Falha ao desserializar o PedidoCozinha.");
+                            _logger.LogWarning("Falha ao desserializar o menu.");
                         }
                     }
                     else

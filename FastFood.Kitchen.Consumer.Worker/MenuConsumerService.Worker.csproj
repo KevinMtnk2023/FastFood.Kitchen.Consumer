@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Application\FastFood.Kitchen.Consumer.Application.csproj" />
-    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Domain\FastFood.Kitchen.Consumer.Domain.csproj" />
-    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Infrastructure\FastFood.Kitchen.Consumer.Infrastructure.csproj" />
+    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Application\MenuConsumerService.Application.csproj" />
+    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Domain\MenuConsumerService.Domain.csproj" />
+    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Infrastructure\MenuConsumerService.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

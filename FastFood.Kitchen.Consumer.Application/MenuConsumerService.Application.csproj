@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Domain\FastFood.Kitchen.Consumer.Domain.csproj" />
+    <ProjectReference Include="..\FastFood.Kitchen.Consumer.Domain\MenuConsumerService.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
